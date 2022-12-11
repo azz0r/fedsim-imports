@@ -1,6 +1,6 @@
 {
-  "name": "@fedsim/imports",
-  "version": "1.0.0",
+  "name": "fsx-imports",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/imports.esm.js",
