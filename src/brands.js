@@ -3,7 +3,7 @@ export default [
     id: 'raw',
     name: 'Raw',
     color: '#fff',
-    balance: 4000,
+    balance: 30000000,
     backgroundColor: '#9f3640',
     directorId: 'triple-h',
     image:
@@ -15,7 +15,7 @@ export default [
     color: '#fff',
     backgroundColor: '#0a3766',
     directorId: 'triple-h',
-    balance: 4000,
+    balance: 30000000,
     image:
       'https://www.wwe.com/f/styles/wwe_show_logo_l/public/all/2019/10/SmackDown_2019_Vert_White--dfb28435b27ecf12e75406176c168c6a.png'
   },
@@ -25,7 +25,7 @@ export default [
     color: '#fff',
     backgroundColor: '#000',
     directorId: 'shawn-michaels',
-    balance: 2000,
+    balance: 4000000,
     image:
       'https://www.wwe.com/f/styles/wwe_show_logo_sm/public/all/2022/09/NXT_NewLogo--61a7c04575fabf96fb577dcdfc0bde63.png'
   },
@@ -33,7 +33,7 @@ export default [
     id: 'aew',
     name: 'AEW',
     backgroundColor: '#312b24',
-    balance: 3000,
+    balance: 20000000,
     directorId: 'tony-khan',
     image:
       'https://static.wixstatic.com/media/94b54e_f31adf9fcafc453fbc9deabd1c59917b~mv2.png/v1/fill/w_276,h_140,al_c,q_85,usm_0.66_1.00_0.01/aew-official-logo.webp',
@@ -44,7 +44,7 @@ export default [
     name: 'Impact',
     color: '#fff',
     backgroundColor: '#666',
-    balance: 1000,
+    balance: 2000000,
     image:
       'https://impactwrestling.com/wp-content/uploads/logo-impact-red-flat.png'
   },
@@ -54,7 +54,7 @@ export default [
     color: '#cd2229',
     backgroundColor: '#000',
     directorId: 'tony-khan',
-    balance: 500,
+    balance: 2000000,
     image:
       '//www.rohwrestling.com/themes/custom/roh_wrestling/images/ring-of-honor-footer-logo.png'
   },
@@ -64,7 +64,7 @@ export default [
     directorId: 'eric-bischoff',
     color: '#fff',
     backgroundColor: '#242424',
-    balance: 2000,
+    balance: 60000000,
     image:
       'https://www.wwe.com/f/styles/wwe_show_logo_l/public/2016/03/WCW--73cd209af37176058f6fbaee821d2bf0.png'
   },
@@ -74,7 +74,7 @@ export default [
     color: '#fff',
     backgroundColor: '#000',
     directorId: 'paul-heyman',
-    balance: 100,
+    balance: 500000,
     image:
       'https://www.wwe.com/f/styles/wwe_show_logo_l/public/2016/03/ECW--618ee2651cb1c769e50855fd47255361.png'
   },
@@ -85,7 +85,7 @@ export default [
     backgroundColor: '#000',
     image:
       'https://www.njpw1972.com/wp-content/themes/njpw-en/images/logo_01.png',
-    balance: 100
+    balance: 5000000
   },
 
   {
@@ -94,7 +94,7 @@ export default [
     color: '#fff',
     backgroundColor: '#232828',
     directorId: 'vince-mcmahon',
-    balance: 1000,
+    balance: 1000000,
     image: "//www.wwe.com/f/styles/wwe_show_logo_sm/public/all/2019/03/HallOfFame_2019--2abc07334db4d339fbf4fd06f740fe53.png"
   }
 ]

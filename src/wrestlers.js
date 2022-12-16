@@ -17,6 +17,25 @@ const POINTS = {
   NO_COMBAT: 1
 }
 
+const COSTS = {
+  LEGEND_TOP: 5000000,
+  LEGEND_BOTTOM: 3000000,
+
+  MAIN_TOP: 2000000,
+  MAIN_BOTTOM: 1000000,
+
+  MID_TOP: 50000000,
+  MID_MID: 40000000,
+  MID_BOTTOM: 30000000,
+
+  BOTTOM_TOP: 20000000,
+  BOTTOM_MID: 20000000,
+  BOTTOM_BOTTOM: 20000000,
+
+  ANNOUNCER: 100000,
+  NO_COMBAT: 100000
+}
+
 const ALIGNMENTS = {
   DEFAULT: 'NEUTRAL',
   BAD: 'BAD',
@@ -31,7 +50,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Roman Reigns',
     entranceVideoEmbedId: 'ql23nGzD8GE',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Roman_Reigns_bio--0ae73db3f83e01688662e05e04cfd552.jpg'
   },
@@ -40,7 +59,7 @@ export default [
     brandIds: ['raw'],
     name: 'Brock Lesnar',
     alignment: ALIGNMENTS.BAD,
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Brock_Lesnar_bio.png'
   },
@@ -49,7 +68,7 @@ export default [
     name: 'John Cena',
     brandIds: ['hall-of-fame'],
     alignment: ALIGNMENTS.GOOD,
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/10/RAW_06202016rf_1606--3d3997f53e6f3e9277cd5a67fbd8f31f.jpg'
   },
@@ -57,7 +76,7 @@ export default [
     id: 'stone-cold-steve-austin',
     name: '"Stone Cold" Steve Austin',
     brandIds: ['hall-of-fame'],
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Steve_Austin_bio.jpg'
@@ -66,7 +85,7 @@ export default [
     id: 'the-rock',
     name: 'The Rock',
     brandIds: ['hall-of-fame'],
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Dwayne_The_Rock_Johnson_bio.png'
@@ -76,7 +95,7 @@ export default [
     brandIds: ['aew'],
     name: 'Daniel Bryan',
     entranceVideoEmbedId: 'WHU5D2O31vs',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/06/Daniel_Bryan_bio--5b64b5311207d6c4e2a4beae4a51d129.jpg'
@@ -86,7 +105,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Drew McIntyre',
     entranceVideoEmbedId: '47cmwx8qZAk',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Drew_McIntyre_bio--faf610edeb2364647f7d7c9068611ea5.jpg'
@@ -96,7 +115,7 @@ export default [
     brandIds: ['raw'],
     name: 'Randy Orton',
     alignment: ALIGNMENTS.GOOD,
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Randy_Orton_bio.png'
   },
@@ -105,7 +124,7 @@ export default [
     name: 'Randy Orton Retro',
     brandIds: ['hall-of-fame'],
     alignment: ALIGNMENTS.BAD,
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     entranceVideoEmbedId: 'H5enKjKAlQU',
     image: '//www.wwe.com/f/styles/gallery_img_l/public/all/2020/07/004_Orto_10082007rf_054b--3035f42e9993d1988bded5655bf22d3c.jpg'
   },
@@ -114,9 +133,8 @@ export default [
     brandIds: ['raw'],
     name: 'AJ Styles',
     alignment: ALIGNMENTS.GOOD,
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     entranceVideoEmbedId: 'fj9ala8nZ7U',
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/AJ_Styles_bio--29520c1a21281781bb33b5afee4e6659.jpg'
   },
@@ -124,9 +142,8 @@ export default [
     id: 'bobby-lashley',
     brandIds: ['raw'],
     name: 'Bobby Lashley',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.GOOD,
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/119_RAW_01142019dg_2081--23a8032d8911c0bc1a6886161911f363.jpg'
   },
@@ -134,9 +151,8 @@ export default [
     id: 'undertaker',
     brandIds: ['hall-of-fame'],
     name: 'Undertaker',
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     alignment: ALIGNMENTS.GOOD,
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Undertaker_bio.png'
   },
@@ -144,10 +160,9 @@ export default [
     id: 'asuka',
     brandIds: ['raw'],
     name: 'Asuka',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     gender: 'FEMALE',
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/Asuka_bio--6b5bfe14193b2907e8c387e6247f5434.jpg'
   },
@@ -155,9 +170,8 @@ export default [
     id: 'sasha-banks',
     name: 'Sasha Banks',
     gender: 'FEMALE',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.BAD,
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/08/140_RAW_08122019jg_2646--8cf76447f79ce919fa13c471765151ff.jpg'
   },
@@ -166,10 +180,9 @@ export default [
     brandIds: ['raw'],
     name: 'Becky Lynch',
     alignment: ALIGNMENTS.BAD,
-    wwe: true,
     gender: 'FEMALE',
     entranceVideoEmbedId: 'xjS0uLKuhBo',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/08/163_SS_08212021RF_38278--547f17a13b7785efcc9d4a26192ac6c6.jpg'
   },
@@ -180,8 +193,7 @@ export default [
     alignment: ALIGNMENTS.GOOD,
     gender: 'FEMALE',
     entranceVideoEmbedId: '9j7vE0x46iA',
-    points: POINTS.MAIN_TOP,
-    wwe: true,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/02/Charlotte_bio--e2e2bce3460ed8bb0be2a74bd0eddac5.jpg'
   },
@@ -190,9 +202,8 @@ export default [
     brandIds: ['raw'],
     name: 'Bayley',
     gender: 'FEMALE',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/10/20191011_Smackdown_Bayley1--1266c041c429375cf11bbb217e310d3e.jpg'
   },
@@ -202,8 +213,7 @@ export default [
     name: 'Ronda Rousey',
     alignment: ALIGNMENTS.BAD,
     gender: 'FEMALE',
-    points: POINTS.MAIN_TOP,
-    wwe: true,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Ronda_Rousey_Bio--06d8789c2edd0524df6c49a45e0aaa45.jpg'
   },
@@ -212,14 +222,14 @@ export default [
     brandIds: ['aew'],
     name: 'Adam Cole',
     alignment: ALIGNMENTS.BAD,
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/03/Adam_Cole_bio--47f4f34c50713489d454e9e6935d834a.jpg'
   },
   {
     id: 'chris-jericho',
     brandIds: ['aew'],
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     name: 'Chris Jericho',
     entranceVideoEmbedId: 'WHU5D2O31vs',
@@ -230,10 +240,9 @@ export default [
     id: 'seth-rollins',
     brandIds: ['raw'],
     name: 'Seth "Freakin" Rollins',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: 'U6g10Gvu3gw',
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Seth_Rollins_Bio--72130ce54b794fca16e54bda79a419ab.jpg'
   },
@@ -241,20 +250,17 @@ export default [
     id: 'finn-balor',
     brandIds: ['raw'],
     name: 'Finn Bálor',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
-    wwe: true,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/08/balor_primary--4bd145b2d54e259fd5edb603a5e1e621.jpg'
   },
   {
     id: 'cody-rhodes',
-    wwe: true,
-    cost: 200,
     brandIds: ['raw'],
     name: 'Cody Rhodes',
     entranceVideoEmbedId: '6Gr5vZ-bmSI',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/04/160_WM38_04022022RF_10380--3d3a4a9239ed9ad48e3724bff82ab1c9.jpg'
@@ -264,7 +270,7 @@ export default [
     brandIds: ['raw'],
     name: 'Riddle',
     entranceVideoEmbedId: 'bbSv8xvJtNg',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Matt_Riddle_bio--f2affe75ec7a776a310e9973755aa3b1.jpg'
@@ -273,7 +279,7 @@ export default [
     id: 'shayna-baszler',
     brandIds: ['smackdown'],
     name: 'Shayna Baszler',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     gender: 'FEMALE',
     image:
@@ -283,7 +289,7 @@ export default [
     id: 'kevin-owens',
     brandIds: ['raw'],
     name: 'Kevin Owens',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: 'SR1SiqiIL0M',
     image:
@@ -292,7 +298,7 @@ export default [
   {
     id: 'big-e',
     brandIds: ['smackdown'],
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     entranceVideoEmbedId: 'KzYFAZGF2KI',
     name: 'Big E',
@@ -303,25 +309,23 @@ export default [
     id: 'kenny-omega',
     brandIds: ['aew'],
     name: 'Kenny Omega',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: '5vHpRoIpaU0',
-    cost: 310
   },
   {
     id: 'adam-page',
     brandIds: ['aew'],
     name: 'Hangman Adam Page',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     alignment: ALIGNMENTS.GOOD,
     entranceVideoEmbedId: 'OM0ilkux9_M',
-    cost: 150
   },
   {
     id: 'edge',
     brandIds: ['raw'],
     name: 'Edge',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     image: '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Edge_bio.png'
   },
@@ -329,7 +333,7 @@ export default [
     id: 'tommaso-ciampa',
     brandIds: ['raw'],
     name: 'Ciampa',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/02/Tomasso_bio--89cd4a14dee8422539989f9afdf29e06.jpg'
   },
@@ -337,9 +341,8 @@ export default [
     id: 'darby-allin',
     brandIds: ['aew'],
     name: 'Darby Allin',
-    points: POINTS.MID_MID,
     alignment: ALIGNMENTS.GOOD,
-    cost: 70,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0c782e4c-fae0-4a87-b7b1-a752598d9df9/ddlpfi9-320ec6cd-8765-4e72-bb13-b05dcce69fdf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMGM3ODJlNGMtZmFlMC00YTg3LWI3YjEtYTc1MjU5OGQ5ZGY5XC9kZGxwZmk5LTMyMGVjNmNkLTg3NjUtNGU3Mi1iYjEzLWIwNWRjY2U2OWZkZi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.kvfkl4Ac6DPhELouqahYH6eUHAoYeDtFuLpwU_aghxc'
   },
@@ -347,13 +350,13 @@ export default [
     id: 'jake-hagar',
     brandIds: ['aew'],
     name: 'Jake Hager',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/rd-talent/Profile/Jack_Swagger_pro.png'
   },
   {
     id: 'brian-cage',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     alignment: ALIGNMENTS.BAD,
     brandIds: ['aew'],
     name: 'Brian Cage'
@@ -362,7 +365,7 @@ export default [
     id: 'sting',
     brandIds: ['aew'],
     name: 'Sting',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     alignment: ALIGNMENTS.GOOD,
     image: '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Sting_bio.jpg'
   },
@@ -370,7 +373,7 @@ export default [
     id: 'dean-ambrose',
     brandIds: ['aew'],
     name: 'Dean Ambrose',
-    points: POINTS.MAIN_TOP,
+    points: POINTS.MAIN_TOP, cost: COSTS.MAIN_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/12/Dean_Ambrose_Bio--6baa7055a81e2551fa07b2a59a19e984.jpg'
@@ -379,7 +382,7 @@ export default [
     id: 'bron-breakker',
     brandIds: ['nxt'],
     name: 'Bron Breakker',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/10/Bron_Breakker_bio--881f838e6bcdb47ac0cf3d5fab0774f4.jpg'
@@ -397,7 +400,7 @@ export default [
     id: 'matt-jackson',
     brandIds: ['aew'],
     name: 'Matt Jackson',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//d2isjg8ovcm7q0.cloudfront.net/sites/default/files/matt-jackson.png'
@@ -406,7 +409,7 @@ export default [
     id: 'nick-jackson',
     brandIds: ['aew'],
     name: 'Nick Jackson',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//d2isjg8ovcm7q0.cloudfront.net/sites/default/files/nick-jackson.png'
@@ -425,7 +428,7 @@ export default [
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Goldberg',
     entranceVideoEmbedId: 'wPcyW3eKL20',
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Goldberg_bio.png'
@@ -458,7 +461,7 @@ export default [
     id: 'awesome-kong',
     gender: 'FEMALE',
     name: 'Awesome Kong',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/rd-talent/Profile/Kharma_Pro.png'
@@ -468,7 +471,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Britt Baker',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     entranceVideoEmbedId: '4t2zR_YeBng',
     alignment: ALIGNMENTS.BAD
   },
@@ -479,7 +482,7 @@ export default [
     brandIds: ['aew'],
     name: 'Lance Archer',
     alignment: ALIGNMENTS.BAD,
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'miro',
@@ -495,7 +498,7 @@ export default [
     id: 'cm-punk',
     brandIds: ['aew'],
     name: 'CM Punk',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: 'W4v7RUBF8CQ',
     image:
@@ -525,6 +528,8 @@ export default [
     name: 'Bray Wyatt',
     brandIds: ['smackdown'],
     points: POINTS.MAIN_TOP,
+    cost: COSTS.MAIN_TOP,
+
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: '_9KOXu24WK0',
     image:
@@ -543,7 +548,7 @@ export default [
     id: 'ric-flair',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Ric Flair',
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Ric_Flair_bio.jpg'
@@ -552,7 +557,7 @@ export default [
     id: 'batista',
     brandIds: ['hall-of-fame'],
     name: 'Batista',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Batista_bio.jpg'
@@ -562,7 +567,7 @@ export default [
     brandIds: ['nxt'],
     name: 'Shawn Michaels',
     entranceVideoEmbedId: 'j4ErmBDTOJo',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_16_9_l_FC/public/2022/11/20221115_NXT_Shawn--11b0d789aff5d343caad7e2a7187721c.jpg'
@@ -572,7 +577,7 @@ export default [
     brandIds: ['hall-of-fame'],
     name: 'Shawn Michaels',
     entranceVideoEmbedId: 'j4ErmBDTOJo',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Shawn_Michaels_bio.jpg'
@@ -591,7 +596,7 @@ export default [
     id: 'randy-savage',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Randy Savage',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Randy_Savage_bio.jpg'
@@ -600,7 +605,7 @@ export default [
     id: 'hulk-hogan',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Hulk Hogan',
-    points: POINTS.LEGEND_TOP,
+    points: POINTS.LEGEND_TOP, cost: COSTS.LEGEND_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Hulk_Hogan_Bio.jpg'
   },
@@ -608,7 +613,7 @@ export default [
     id: 'lex-luger',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Lex Luger',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Lex_Luger_bio.jpg'
   },
@@ -616,7 +621,7 @@ export default [
     id: 'scott-steiner',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Scott Steiner',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Scott_Steiner_bio.jpg'
   },
@@ -624,7 +629,7 @@ export default [
     id: 'yokozuna',
     brandIds: ['hall-of-fame'],
     name: 'Yokozuna',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     entranceVideoEmbedId: 'eVg0tD8B8hs',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/2016/02/Yokozuna_bio--12cbb0873e1b83a7fa05ec45614fc134.jpg'
@@ -633,7 +638,7 @@ export default [
     id: 'rick-steiner',
     brandIds: ['wcw', 'hall-of-fame'],
     name: 'Rick Steiner',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Rick_Steiner_bio.jpg'
   },
@@ -641,7 +646,7 @@ export default [
     id: 'rikishi',
     brandIds: ['hall-of-fame'],
     name: 'Rikishi',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Rikishi_bio.jpg'
   },
@@ -649,7 +654,7 @@ export default [
     id: 'kurt-angle',
     brandIds: ['hall-of-fame'],
     name: 'Kurt Angle',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/04/Kurt_Angle_bio--f9c9aeddb0461a945addadb12c395032.jpg'
   },
@@ -657,7 +662,7 @@ export default [
     id: 'mick-foley',
     brandIds: ['hall-of-fame'],
     name: 'Mick Foley',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/01/Mick_Foley_bio--4f72838dc2f52dc94e8bf99a643edce6.jpg'
   },
@@ -665,7 +670,7 @@ export default [
     id: 'jim-ross',
     brandIds: ['aew'],
     name: 'Jim Ross',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT, cost: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Jim_Ross_bio.png'
   },
@@ -673,7 +678,7 @@ export default [
     id: 'eddie-guerrero',
     brandIds: ['hall-of-fame'],
     name: 'Eddie Guerrero',
-    points: POINTS.LEGEND_BOTTOM,
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Eddie_Guerrero_bio.png'
   },
@@ -683,13 +688,13 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/09/EddieKingston_20211115_1-1.png',
     brandIds: ['aew'],
     name: 'Eddie Kingston',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
   },
   {
     id: 'keith-lee',
     brandIds: ['aew'],
     name: 'Keith Lee',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/08/Keith_Lee_bio--d3d040cad664a30d198d297e39a329d1.jpg'
   },
@@ -697,7 +702,7 @@ export default [
     id: 'jeff-hardy',
     brandIds: ['aew'],
     name: 'Jeff Hardy',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/02/Jeff_Hardy_Bio--37ebc027d0af9203fd5739121f47a19b.jpg'
   },
@@ -705,7 +710,7 @@ export default [
     id: 'matt-hardy',
     brandIds: ['aew'],
     name: 'Matt Hardy',
-    points: POINTS.MID_BOTTOM,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/01/Matt_Hardy_Bio--757b586488848bf5d6b79b8494983e98.jpg'
   },
@@ -713,7 +718,7 @@ export default [
     id: 'kofi-kingston',
     brandIds: ['smackdown'],
     name: 'Kofi Kingston',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     entranceVideoEmbedId: 'PdnBh3mOl9U',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/Kofi_Kingston-bio--a9875cc2196cfd5cc9745156479f197b.jpg'
@@ -723,7 +728,7 @@ export default [
     brandIds: ['raw'],
     name: 'Rhea Ripley',
     gender: 'FEMALE',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/08/062_RAW_08232021HM_25143--6cee358baa3a65a53e371b741380aa2d.jpg'
@@ -732,7 +737,7 @@ export default [
     id: 'damian-priest',
     brandIds: ['raw'],
     name: 'Damian Priest',
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/06/Damian_Priest_Bio--f01a49c2a618945b641c42a7a3ebb128.jpg'
@@ -743,6 +748,8 @@ export default [
     gender: 'FEMALE',
     name: 'Bianca Belair',
     points: POINTS.MAIN_TOP,
+    cost: COSTS.MAIN_TOP,
+
     alignment: ALIGNMENTS.GOOD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/11/BiancaBelair_bio--da86a5efe632a08918f0e91ed6772026.jpg'
@@ -782,8 +789,7 @@ export default [
     id: 'mjf',
     brandIds: ['aew'],
     name: 'MJF',
-    points: POINTS.MAIN_BOTTOM,
-    cost: 60,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/8/89/MJF_-_7ec54e9588a24443827c7a121299c4c6.png/revision/latest?cb=20191003135211'
   },
@@ -791,7 +797,7 @@ export default [
     id: 'orange-cassidy',
     brandIds: ['aew'],
     name: 'Orange Cassidy',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//pbs.twimg.com/profile_images/984773938931752962/8EGyL6Gz_400x400.jpg'
   },
@@ -799,7 +805,7 @@ export default [
     id: 'pac',
     brandIds: ['aew'],
     name: 'Pac',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/all/2017/01/Neville_pro--aa2f90dc2f99f902994779324b5ac371.png'
   },
@@ -807,7 +813,7 @@ export default [
     id: 'pentagon-jr',
     brandIds: ['aew'],
     name: 'Pentagon Jr',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//vignette.wikia.nocookie.net/svr06/images/8/88/Pentagon_jr_-_Copy_%282%29.png/revision/latest/scale-to-width-down/1000?cb=20190331015806'
   },
@@ -881,7 +887,7 @@ export default [
     id: 'toni-storm',
     brandIds: ['aew'],
     name: 'Toni Storm',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     gender: 'FEMALE',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/10/UKCT_06182018at_1107--95083cb15a11912d1f862d9c58f68996.jpg'
@@ -889,7 +895,7 @@ export default [
   {
     id: 'the-miz',
     brandIds: ['raw'],
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     name: 'The Miz',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/The_Miz-bio--e1d80a6a91ca20caff3891a49e5721c9.jpg'
@@ -897,7 +903,7 @@ export default [
   {
     id: 'rey-mysterio',
     brandIds: ['smackdown'],
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.GOOD,
     name: 'Rey Mysterio',
     image:
@@ -930,7 +936,7 @@ export default [
   {
     id: 'sheamus',
     brandIds: ['smackdown'],
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     entranceVideoEmbedId: 'wi22Xgxx-Ak',
     name: 'Sheamus',
@@ -940,7 +946,7 @@ export default [
   {
     id: 'dolph-ziggler',
     brandIds: ['smackdown'],
-    points: POINTS.MID_BOTTOM,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     name: 'Dolph Ziggler',
     image:
@@ -950,13 +956,14 @@ export default [
     id: 'cameron-grimes',
     brandIds: ['nxt'],
     name: 'Cameron Grimes',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/07/Cameron_Grimes_bio--20300a33783bf2d635c40618cfe6fdf6.jpg'
   },
   {
     id: 'theory',
     brandIds: ['raw'],
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     name: 'Theory',
     image:
@@ -966,12 +973,13 @@ export default [
     id: 'kyle-oreilly',
     brandIds: ['aew'],
     name: "Kyle O'Reilly",
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     alignment: ALIGNMENTS.BAD
   },
   {
     id: 'shotzi',
     brandIds: ['smackdown'],
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     name: 'Shotzi',
     gender: 'FEMALE',
     image:
@@ -980,8 +988,8 @@ export default [
   {
     id: 'cima',
     brandIds: ['aew'],
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     name: 'Cima',
-    points: 85,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/c/c0/CIMA.png/revision/latest?cb=20160809113051'
   },
@@ -989,7 +997,7 @@ export default [
     id: 'dustin-rhodes',
     brandIds: ['aew'],
     name: 'Dustin Rhodes',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/5/5d/Dustin_Rhodes_-_AEW_-_71184129.jpg/revision/latest?cb=20191019181321'
   },
@@ -998,6 +1006,7 @@ export default [
     brandIds: ['raw'],
     name: 'Doudrop',
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/NXTUK_Coventry_02232019at_4833--41cbea96c27fc7afc4c223d7aa473679.jpg'
@@ -1006,14 +1015,14 @@ export default [
     id: 'jack-evans',
     brandIds: ['aew'],
     name: 'Jack Evans',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image: 'http://www.luchawiki.com/images/a/a3/Jack_Evans_2015.png'
   },
   {
     id: 'eva-marie',
     name: 'Eva Marie',
     gender: 'FEMALE',
-    points: POINTS.BOTTOM_BOTTOM,
+    points: POINTS.BOTTOM_BOTTOM, cost: COSTS.BOTTOM_BOTTOM,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Eva_Marie_bio.png'
@@ -1024,13 +1033,13 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/11/jeffcobb_20201119_2.png',
     brandIds: ['ring-of-honor'],
     name: 'Jeff Cobb',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
   },
   {
     id: 'jungle-boy',
     brandIds: ['aew'],
     name: 'Jungle Boy',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/8/81/4869.jpg/revision/latest?cb=20200106135816'
   },
@@ -1038,7 +1047,7 @@ export default [
     id: 'marq-quen',
     brandIds: ['aew'],
     name: 'Marq Quen',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecf396fe-0ac8-46ce-a309-a3f5445e7da5/dd72k6x-73f11572-56da-4b59-b228-90802f5a6878.png/v1/fill/w_600,h_873,strp/marq_quen_by_kjc9578_dd72k6x-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD04NzMiLCJwYXRoIjoiXC9mXC9lY2YzOTZmZS0wYWM4LTQ2Y2UtYTMwOS1hM2Y1NDQ1ZTdkYTVcL2RkNzJrNngtNzNmMTE1NzItNTZkYS00YjU5LWIyMjgtOTA4MDJmNWE2ODc4LnBuZyIsIndpZHRoIjoiPD02MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.fUupZayPXA9cTuTAd64XQ3F0qWS2IkZmDyiMZfjbg5M'
   },
@@ -1046,7 +1055,7 @@ export default [
     id: 'ortiz',
     brandIds: ['aew'],
     name: 'Ortiz',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/6/63/Ortiz_LAX.jpg/revision/latest?cb=20170624000613'
   },
@@ -1054,8 +1063,7 @@ export default [
     id: 'sammy-guevara',
     brandIds: ['aew'],
     name: 'Sammy Guevara',
-    cost: 70,
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/92c15a89-f0b4-4a8b-86dd-7165bd7189a0/ddvt497-042c6372-afaa-4149-92a3-e788b406fab2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOTJjMTVhODktZjBiNC00YThiLTg2ZGQtNzE2NWJkNzE4OWEwXC9kZHZ0NDk3LTA0MmM2MzcyLWFmYWEtNDE0OS05MmEzLWU3ODhiNDA2ZmFiMi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.1iYO2rDnjVLD1acm5I1tVlxdu39aRi3S-2C_Hp5GGik'
   },
@@ -1063,7 +1071,7 @@ export default [
     id: 'stu-grayson',
     brandIds: ['aew'],
     name: 'Stu Grayson',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//prowrestlingnewshub.com/wp-content/uploads/2020/03/Stu-Grayson-768x619.png'
   },
@@ -1071,7 +1079,7 @@ export default [
     id: 'the-blade',
     brandIds: ['aew'],
     name: 'The Blade',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/542e0308-a57f-4dd7-89d2-d447f3cdd3a8/ddrzg2o-9f659106-4529-4cab-97d9-719a0f630ea4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTQyZTAzMDgtYTU3Zi00ZGQ3LTg5ZDItZDQ0N2YzY2RkM2E4XC9kZHJ6ZzJvLTlmNjU5MTA2LTQ1MjktNGNhYi05N2Q5LTcxOWEwZjYzMGVhNC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.3m3MCLlolxB4fpWSKlePAVLPaCx3ntl0JyK6QAdCfw8'
   },
@@ -1079,7 +1087,7 @@ export default [
     id: 'trent',
     brandIds: ['aew'],
     name: 'Trent',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/2/29/Beretta.png/revision/latest?cb=20190122124809'
   },
@@ -1088,7 +1096,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Hikaru Shida',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddt64xv-863a33e0-df1d-4cfd-9ca0-8289629c8ba6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZHQ2NHh2LTg2M2EzM2UwLWRmMWQtNGNmZC05Y2EwLTgyODk2MjljOGJhNi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.B7axvjjzUvdSEStFhF_WH5gn2aW4idE_5ba_MrOAJEQ'
   },
@@ -1097,7 +1105,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Kris Statlander',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/0/00/Kris_Statlander_-_ProfPic_-_18092.png/revision/latest?cb=20200828222815'
   },
@@ -1106,7 +1114,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Nyla Rose',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/d/d6/Nyla_Rose_-_34162569438140708ab1c2ad68cf41ef.png/revision/latest?cb=20190609033419'
   },
@@ -1115,7 +1123,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Penelope Ford',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddsbdp2-a27542a1-0f13-4c17-a9a1-a29e9e09f947.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZHNiZHAyLWEyNzU0MmExLTBmMTMtNGMxNy1hOWExLWEyOWU5ZTA5Zjk0Ny5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.v5CXh2MrDNOyfGc0gsz_9J7GBbHN0_M03MGuPyoUtsY'
   },
@@ -1124,7 +1132,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'The Bunny',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/542e0308-a57f-4dd7-89d2-d447f3cdd3a8/ddrzixp-996b8cec-d7ec-4998-9922-98da5c0260e5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTQyZTAzMDgtYTU3Zi00ZGQ3LTg5ZDItZDQ0N2YzY2RkM2E4XC9kZHJ6aXhwLTk5NmI4Y2VjLWQ3ZWMtNDk5OC05OTIyLTk4ZGE1YzAyNjBlNS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.4QXsawJTPnmP_1n4vm9lLRMzqLSu1ltmzRW4PVej4mM'
   },
@@ -1133,7 +1141,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Yuka Sakazaki',
-    points: 85,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/4/44/Yuka_Sakazaki_-_dd4x3q1.png/revision/latest?cb=20191031010800'
   },
@@ -1142,6 +1150,7 @@ export default [
     brandIds: ['hall-of-fame'],
     gender: 'FEMALE',
     name: 'Chyna',
+    points: POINTS.LEGEND_BOTTOM, cost: COSTS.LEGEND_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/2016/05/Chyna_bio--b046c73c4a0f544a13177e30bae2cb14.jpg'
   },
@@ -1150,6 +1159,7 @@ export default [
     id: 'humberto-carrillo',
     brandIds: ['nxt'],
     name: 'Humberto',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Humberto_Carrillo_bio--f0e91a3ad904fb24fe736a85e804d156.jpg'
   },
@@ -1157,6 +1167,7 @@ export default [
     id: 'carmelo-hayes',
     brandIds: ['nxt'],
     name: 'Carmelo Hayes',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/08/Carmelo_Hayes_bio--ee74a774f429620659f605933267fe36.jpg'
   },
@@ -1164,6 +1175,7 @@ export default [
     id: 'apollo-crews',
     brandIds: ['nxt'],
     name: 'Apollo Crews',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/08/crewsprimary--0392e55ae47b5fb6aff75074f4d37244.jpg'
   },
@@ -1171,6 +1183,7 @@ export default [
     id: 'johnny-gargano',
     brandIds: ['raw'],
     name: 'Johnny Gargano',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/06/Johnny_Gargano_bio--4acb9c0789c30db578d2ac0ec78e520f.jpg'
   },
@@ -1180,7 +1193,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Riho',
-    points: 83,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//upload.wikimedia.org/wikipedia/en/thumb/4/40/RihoWrestler.2015Croppedpng.png/800px-RihoWrestler.2015Croppedpng.png'
   },
@@ -1196,6 +1209,7 @@ export default [
     id: 'ricochet',
     brandIds: ['smackdown'],
     name: 'Ricochet ',
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Ricochet-bio--a036c6b7944f025ca29888479bfe473c.jpg'
   },
@@ -1204,6 +1218,7 @@ export default [
     brandIds: ['raw'],
     name: 'Robert Roode',
     alignment: ALIGNMENTS.BAD,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Robert_Roode-bio--632add86f7ecd0179fce75f416d526e3.jpg'
   },
@@ -1212,6 +1227,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Santos Escobar',
     alignment: ALIGNMENTS.BAD,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2020/06/Santos_Escobar_bio--2ae743140ea98599bdf37810119e53ec.jpg'
   },
@@ -1220,15 +1236,15 @@ export default [
     brandIds: ['smackdown'],
     name: 'Fabian Aichner',
     alignment: ALIGNMENTS.BAD,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/06/Fabian_Achner_bio--5651d7c849dd4de4e18c06dac1ac12f5.jpg',
-    wwe: true,
-    points: 82
   },
   {
     id: 'dexter-lumis',
     brandIds: ['raw'],
     name: 'Dexter Lumis',
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/07/Dexter_Lumis_bio--7f0cb05e55af6f5263e776fad9cf7913.jpg'
   },
@@ -1236,12 +1252,14 @@ export default [
     id: 'naomi',
     name: 'Naomi',
     gender: 'FEMALE',
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Naomi-bio--fbb75589a338d150449e928906be4519.jpg'
   },
   {
     id: 'angel-garza',
     brandIds: ['smackdown'],
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     name: 'Angel',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/06/NXT_06122019ca_2494--384fc2e47dc3fbc2fae4fdc1dc775b51.jpg'
@@ -1249,6 +1267,7 @@ export default [
   {
     id: 'mvp',
     brandIds: ['raw'],
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     name: 'MVP',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/mvpprimayr--b48235c307c1d100c0f62e2e17a19ebc.jpg'
@@ -1257,7 +1276,7 @@ export default [
     id: 'mandy-rose',
     brandIds: ['nxt'],
     name: 'Mandy Rose',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     gender: 'FEMALE',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/09/064_NXT_09212021BR_29691--3a9b07218b201206db788a149b9251c1.jpg'
@@ -1266,12 +1285,14 @@ export default [
     id: 'angelo-dawkins',
     brandIds: ['raw'],
     name: 'Angelo Dawkins',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/09/Angelo_Dawkins_bio--ab4c3c59bae6c640d9604e0fc23e9604.jpg'
   },
   {
     id: 'otis',
     brandIds: ['smackdown'],
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     name: 'Otis',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/Otis_bio--a6430f0bfbe628c490ef5ebb9354e408.jpg'
@@ -1281,13 +1302,15 @@ export default [
     brandIds: ['smackdown'],
     name: 'Natalya',
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/02/SD_04302021HM_10614--fd1ced5c4fa27847de85b876452a3335.jpg'
   },
   {
-    id: 'happy-corbin',
+    id: 'corbin',
     brandIds: ['smackdown'],
-    name: 'Happy Corbin',
+    name: 'Corbin',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/08/030_SD_08272021CA_27179--1af7f9ae1a7274a216a58b2b457ad256.jpg'
   },
@@ -1296,6 +1319,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Tamina',
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/tamina--377a00dc06af06dc77d886219d632240.jpg'
   },
@@ -1303,6 +1327,7 @@ export default [
     id: 'chad-gable',
     brandIds: ['raw'],
     name: 'Chad Gable',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/08/031_SD_08132021DG_38735--67d8bcce606e039b0221e5ba6f8f74ba.jpg'
   },
@@ -1310,6 +1335,7 @@ export default [
     id: 'cesaro',
     brandIds: ['aew'],
     name: 'Cesaro',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Cesaro_bio--01f0cbda82f7422b60981cb65c558963.jpg'
   },
@@ -1318,6 +1344,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Raquel Rodriguez ',
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/Raquel_Gonzalez_bio--f97b756f74283a3dbf90aa594e62613c.jpg'
   },
@@ -1326,6 +1353,7 @@ export default [
     name: 'Xia Li',
     brandIds: ['smackdown'],
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/Xia_Li_bio--bc01c0ae2200bf949b986b3d22141660.jpg'
   },
@@ -1333,12 +1361,13 @@ export default [
     id: 'swerve-scott',
     brandIds: ['aew'],
     name: 'Swerve Scott',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     alignment: -1,
-    points: 80
   },
   {
     id: 'ludwig-kaiser',
     name: 'Ludwig Kaiser',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/04/019_SD_04082022HM_18718--687eaad21ffba3f0b65e0459ebaa6e4f.jpg'
   },
@@ -1346,26 +1375,29 @@ export default [
     id: 'roderick-strong',
     brandIds: ['nxt'],
     name: 'Roderick Strong',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/03/Roderick_Strong_bio--324bf9d3b49b453ead59a11c13687247.jpg'
   },
   {
     id: 'bobby-fish',
-    brandIds: ['impact'],
+    brandIds: [],
     name: 'Bobby Fish',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/06/Bobby_Fish_bio--6d2bf67b8f29bc580e14ab472bfad15b.jpg'
   },
   {
     id: 'drake-maverick',
     name: 'Drake Maverick',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/Drake_Maverick_bio--33a7d711d1f6d51e96ac24bbd691360b.jpg'
   },
   {
     id: 'angelico',
     name: 'Angelico',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/b/b2/Angelico2015.jpg/revision/latest?cb=20170619185447'
   },
@@ -1373,7 +1405,7 @@ export default [
     id: 'chuck-taylor',
     brandIds: ['aew'],
     name: 'Chuck Taylor',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/6/6b/ChuckieT.jpg/revision/latest?cb=20171109043244'
   },
@@ -1381,13 +1413,13 @@ export default [
     id: 'ethan-page',
     brandIds: ['aew'],
     name: 'Ethan Page',
-    points: '80'
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
   },
   {
     id: 'evil-uno',
     brandIds: ['aew'],
     name: 'Evil Uno',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/e/ee/Evil_uno_b00_by_tiorollins07_ddkkcka-fullview.png/revision/latest?cb=20191121104923'
   },
@@ -1395,7 +1427,7 @@ export default [
     id: 'isiah-kassidy',
     brandIds: ['aew'],
     name: 'Isiah Kassidy',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/6/61/Ddk6s9e-8998e1fc-daab-4ae2-89a4-5547132b7816.png/revision/latest?cb=20191114112413'
   },
@@ -1403,7 +1435,7 @@ export default [
     id: 'jimmy-havoc',
     brandIds: ['aew'],
     name: 'Jimmy Havoc',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/whatculture-wrestling/images/e/ea/Jimmy_Havoc_17_cut_by_Danger_Liam_2.png/revision/latest?cb=20170707123754'
   },
@@ -1411,7 +1443,7 @@ export default [
     id: 'kip-sabian',
     brandIds: ['aew'],
     name: 'Kip Sabian',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/whatculture-wrestling/images/9/9c/Kip_Sabian.png/revision/latest?cb=20180916104521'
   },
@@ -1419,7 +1451,7 @@ export default [
     id: 'marko-stunt',
     brandIds: ['aew'],
     name: 'Marko Stunt',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/99a2efd3-c027-4635-9e0d-c94060e35803/dd2r7oy-ed2e2078-43db-4698-ae3f-e7bbf74a1d2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOTlhMmVmZDMtYzAyNy00NjM1LTllMGQtYzk0MDYwZTM1ODAzXC9kZDJyN295LWVkMmUyMDc4LTQzZGItNDY5OC1hZTNmLWU3YmJmNzRhMWQyYS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Z3kcWgHRsKAS8ReXPxAbFQbmDgMdoLO504f74TPLCE0'
   },
@@ -1427,7 +1459,7 @@ export default [
     id: 'michael-nakazawa',
     brandIds: ['aew'],
     name: 'Michael Nakazawa',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/b/bb/Michael_nakazawa_b00_by_tiorollins07_ddkkaey-fullview.png/revision/latest?cb=20200527090524'
   },
@@ -1435,7 +1467,7 @@ export default [
     id: 'shawn-spears',
     brandIds: ['aew'],
     name: 'Shawn Spears',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddrnztk-fb763435-a5e8-495f-8146-02d9e2afc666.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZHJuenRrLWZiNzYzNDM1LWE1ZTgtNDk1Zi04MTQ2LTAyZDllMmFmYzY2Ni5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.baVePeaf2xMgUU69ZMlI0eVhVyHPGXdNoZqcbR4qbXI'
   },
@@ -1444,7 +1476,7 @@ export default [
     gender: 'FEMALE',
     brandIds: ['aew'],
     name: 'Big Swole',
-    points: 80,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddps47e-3c73a833-4733-45e7-99aa-9dbfb40fb52f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZHBzNDdlLTNjNzNhODMzLTQ3MzMtNDVlNy05OWFhLTlkYmZiNDBmYjUyZi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.450KW_GuvtWFAxlqdhWLE9UlJLHA3hkHztphi7gdy2o'
   },
@@ -1452,39 +1484,39 @@ export default [
     id: 'karrion-kross',
     brandIds: ['smackdown'],
     name: 'Karrion Kross',
-    points: 80
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
   },
   {
     id: 'scarlett',
     brandIds: ['smackdown'],
     name: 'Scarlett',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     gender: 'FEMALE'
   },
   {
     id: 'mansoor',
     brandIds: ['smackdown'],
     name: 'SMÅN.SÔÖR',
-    points: 80
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
   },
   {
     id: 'ashante-adonis',
     brandIds: ['smackdown'],
     name: 'Ashante Adonis',
-    points: 80
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
   },
   {
     id: 'b-fab',
     brandIds: ['smackdown'],
     name: 'B-FAB',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     gender: 'FEMALE'
   },
   {
     id: 'emi-sakura',
     name: 'Emi Sakura',
     gender: 'FEMALE',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//vignette.wikia.nocookie.net/mcuff/images/1/16/Emi_sakura_b00_by_tiorollins07_ddkkcvp-fullview.png/revision/latest?cb=20200527091557'
   },
@@ -1492,7 +1524,7 @@ export default [
     id: 'leva-bates',
     gender: 'FEMALE',
     name: 'Leva Bates',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ce33d7dc-eeb1-4900-be73-3c00611e37af/db55l9e-3e67dd76-370d-4f94-9923-16921bf09959.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvY2UzM2Q3ZGMtZWViMS00OTAwLWJlNzMtM2MwMDYxMWUzN2FmXC9kYjU1bDllLTNlNjdkZDc2LTM3MGQtNGY5NC05OTIzLTE2OTIxYmYwOTk1OS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.xHUCxYtNnIBgDPyTzvSZKex58GnKcv7ndwadhh8FnfA'
   },
@@ -1500,7 +1532,7 @@ export default [
     id: 'sadie-gibbs',
     gender: 'FEMALE',
     name: 'Sadie Gibbs',
-    points: 80,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddn3w8h-af0851e4-a1c7-4ba4-b19c-c07c2828fcea.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZG4zdzhoLWFmMDg1MWU0LWExYzctNGJhNC1iMTljLWMwN2MyODI4ZmNlYS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.xnF1OrJbtFQzhO3A_9NJIkpeQ2B_deWp_vzkEzZfuzg'
   },
@@ -1509,6 +1541,7 @@ export default [
     brandIds: ['nxt'],
     gender: 'FEMALE',
     name: 'Meiko Satomura',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/001_NXTUK_London_01112021AT_1520--e11ab87f59fdcee7ce854206f3117d8e.jpg'
   },
@@ -1516,6 +1549,7 @@ export default [
     id: 'noam-dar',
     brandIds: ['nxt'],
     name: 'Noam Dar',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/NXTUK_London_09022020at_0905--01a025783046acb0d50455bad9fb6255.jpg'
   },
@@ -1523,6 +1557,7 @@ export default [
     id: 'ilja-dragunov',
     brandIds: ['nxt'],
     name: 'Ilja Dragunov ',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/08/NXTUK_Glasgow_04192019at_3927--30df32e0d5d19b7fd884992d63274d89.jpg'
   },
@@ -1531,6 +1566,7 @@ export default [
     name: 'Gigi Dolin',
     brandIds: ['nxt'],
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/10/Gigi_Dolin_bio--81c556d710fe1e7abac33549205dfb8c.jpg'
   },
@@ -1539,6 +1575,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Queen Zelina',
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/zelina2--077579028a7c0aa3bd6b4deebc25fc27.jpg'
   },
@@ -1547,6 +1584,7 @@ export default [
     brandIds: ['nxt'],
     name: 'Alicia Taylor',
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/08/Alica_Taylor_bio--be2cfbe7bed91a19ad86599b2575f0df.jpg'
   },
@@ -1555,6 +1593,7 @@ export default [
     brandIds: ['nxt'],
     name: 'Amale',
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/029_NXTUK_London_01112021AT_1827--ded78ffbb92f5422ce9b2e2de7e48b1d.jpg'
   },
@@ -1563,6 +1602,7 @@ export default [
     brandIds: ['nxt'],
     name: 'Amari Miller',
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/10/012_205_09032021CG_22619--19723339e572ced62c79db873a751487.JPG'
   },
@@ -1570,6 +1610,7 @@ export default [
     id: 'andre-chase',
     brandIds: ['nxt'],
     name: 'Andre Chase',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/11/Andre_Chase_Bio--a11217c948fc73bd5ea9a5b6c7865f93.jpg'
   },
@@ -1577,6 +1618,7 @@ export default [
     id: 'aoife-valkyrie',
     brandIds: ['nxt'],
     name: 'Aoife Valkyrie',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     gender: 'FEMALE',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/04/032_NXTUK_London_03292021AT_0590--9a06592a73473643826ede599f31d284.jpg'
@@ -1585,6 +1627,7 @@ export default [
     id: 'ashton-smith',
     brandIds: ['nxt'],
     name: 'Ashton Smith',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/NXTUK_London_09022020at_1687--9ec59298e0b427ef971f6256d87e94f9.jpg'
   },
@@ -1592,6 +1635,7 @@ export default [
     id: 'beth-phoenix',
     brandIds: ['nxt'],
     name: 'Beth Phoenix',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     gender: 'FEMALE',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/06/MMC_01092018ca_0100--2ca87a8b7cd5bb883b7dd9b8848563d7.jpg'
@@ -1599,6 +1643,7 @@ export default [
   {
     id: 'boa',
     brandIds: ['nxt'],
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     name: 'Boa',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/07/Boa_bio--8a342aafd9da326443d87caf54a1f9a4.jpg'
@@ -1607,12 +1652,14 @@ export default [
     id: 'blair-davenport',
     brandIds: ['nxt'],
     name: 'Blair Davenport',
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/10/001_NXTUK_London_10062021_AT_1464--55a63c1637a2f9f8c22ee5957afd9a74.jpg'
   },
   {
     id: 'brutus-creed',
     brandIds: ['nxt'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     name: 'Brutus Creed',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/10/Brutus_Creed_bio--4d019031edc807f0e89ff35b21ff1ad8.jpg'
@@ -1620,6 +1667,7 @@ export default [
   {
     id: 'charlie-dempsey',
     brandIds: ['nxt'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     name: 'Charlie Dempsey',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/02/Charlie_Dempsey_Bio--db4b99b53b5913ffb8938fbdaa2d004b.jpg'
@@ -1627,6 +1675,7 @@ export default [
   {
     id: 'dani-luna',
     brandIds: ['nxt'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     name: 'Dani Luna',
     gender: 'FEMALE',
     image:
@@ -1635,6 +1684,7 @@ export default [
   {
     id: 'cora-jade',
     brandIds: ['nxt'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     name: 'Cora Jade',
     gender: 'FEMALE',
     image:
@@ -1644,6 +1694,7 @@ export default [
     id: 'dave-mastiff',
     brandIds: ['nxt'],
     name: 'Dave Mastiff',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/10/UKCT_06182018at_0359--264025c847fed7aef531b6437e454030.jpg'
   },
@@ -1651,13 +1702,15 @@ export default [
     id: 'duke-hudson',
     brandIds: ['nxt'],
     name: 'Duke Hudson',
+    points: POINTS.BOTTOM_BOTTOM, cost: COSTS.BOTTOM_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/12/Duke_Hudson_bio--82e038a76e2f96ee8a9b4fdcdc7f330a.jpg'
   },
   {
     id: 'eddie-dennis',
     brandIds: ['nxt'],
-    name: 'Eddie Dennis ',
+    name: 'Eddie Dennis',
+    points: POINTS.BOTTOM_BOTTOM, cost: COSTS.BOTTOM_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/11/020_NXTUK_CambridgeDay2_at_2463--91c93aaed5154330db71cae08eb4da27.jpg'
   },
@@ -1666,6 +1719,7 @@ export default [
     brandIds: ['nxt'],
     name: 'Elektra Lopez',
     gender: 'FEMALE',
+    points: POINTS.BOTTOM_BOTTOM, cost: COSTS.BOTTOM_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/09/Elektra_Lopez_bio--5afe567602a85ea2592c77c13ce6eb23.jpg'
   },
@@ -1673,7 +1727,7 @@ export default [
     id: 'grayson-waller',
     brandIds: ['nxt'],
     name: 'Grayson Waller',
-    points: POINTS.MID_MID,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/11/001_205_07202021AK_01121--3927f8ed32bd517fd2ed29f31c58a6bd.jpg'
   },
@@ -1681,7 +1735,7 @@ export default [
     id: 'gunther',
     brandIds: ['smackdown'],
     name: 'Gunther ',
-    points: POINTS.MAIN_BOTTOM,
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/02/NXTUK_Blackpool_01132019at_2277--f95d90aeaf4a95bcf80b2e35de4f9f80.jpg'
   },
@@ -1689,14 +1743,14 @@ export default [
     id: 'indi-hartwell',
     brandIds: ['nxt'],
     name: 'Indi Hartwell',
-    points: POINTS.MID_MID,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2020/07/022_NXT_07152020CG_03185--847e70bce1f68b5f730e59a3cf681902.jpg'
   },
   {
     id: 'isla-dawn',
     brandIds: ['nxt'],
-    points: POINTS.MID_MID,
+    points: POINTS.BOTTOM_MID, cost: COSTS.BOTTOM_MID,
     name: 'Isla Dawn',
     gender: 'FEMALE',
     image:
@@ -1831,7 +1885,7 @@ export default [
   {
     id: 'solo-sikoa',
     brandIds: ['smackdown'],
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     name: 'Solo Sikoa',
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/11/Solo_Sikoa_bio--925e5a0c3b05688497a70264e2910ec9.jpg'
@@ -1957,11 +2011,10 @@ export default [
     id: 'nikki-ash',
     gender: 'FEMALE',
     brandIds: ['raw'],
-    points: POINTS.MID_BOTTOM,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     name: 'Nikki A.S.H.',
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/all/2021/07/CROSS_06282021jg_0047_Nikki_Cross_Profile--0601b6e174fd6ed35d78b779b6156d7c.png',
-    cost: 70
   },
   {
     id: 'carmella',
@@ -1991,7 +2044,7 @@ export default [
   {
     id: 'omos',
     brandIds: ['raw'],
-    points: POINTS.MID_TOP,
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     alignment: ALIGNMENTS.BAD,
     name: 'Omos',
     image:
@@ -2000,7 +2053,7 @@ export default [
   {
     id: 'sonny-kiss',
     name: 'Sonny Kiss',
-    points: POINTS.BOTTOM_BOTTOM,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     brandIds: ['aew'],
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98a6e8ba-294f-44c2-b878-23e230138aca/ddof1yw-29a4a8bd-8350-417d-a8d6-579474bbb71d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvOThhNmU4YmEtMjk0Zi00NGMyLWI4NzgtMjNlMjMwMTM4YWNhXC9kZG9mMXl3LTI5YTRhOGJkLTgzNTAtNDE3ZC1hOGQ2LTU3OTQ3NGJiYjcxZC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.YzjTDBYuigdGaytgLyE5CnxzqMegnwVtsZsUt2q99NU'
@@ -2008,6 +2061,7 @@ export default [
   {
     id: 'elias',
     name: 'Elias',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     brandIds: ['raw'],
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/Elias-bio--1c08ae708d31806e232374f33ed8b3f9.jpg'
@@ -2016,16 +2070,16 @@ export default [
     id: 't-bar',
     name: 'T-BAR',
     brandIds: ['smackdown'],
-    points: 75,
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/talent_champion_xs/public/all/2021/09/MACE_TBAR_04262021ej_00136_Tbar_Profile--d2cbede433aa80a4500e9e0f15a75dd0.png',
-    cost: 70
   },
   {
     id: 'liv-morgan',
     brandIds: ['smackdown'],
     name: 'Liv Morgan',
     gender: 'FEMALE',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/08/livprimary2--9985b3f2b3f47cf28a04ed1ea747d608.jpg'
   },
@@ -2034,6 +2088,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Jimmy Uso',
     entranceVideoEmbedId: 'tscAN8W0QgU',
+    points: POINTS.MID_TOP, cost: COSTS.MID_TOP,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/05/Jimmy_Uso-bio--55919dc0cc43977b838e84d5db4746c0.jpg'
   },
@@ -2041,17 +2096,18 @@ export default [
     id: 'qt-marshall',
     brandIds: ['aew'],
     name: 'QT Marshall',
-    points: 75
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
   },
   {
     id: 'bea-priestly',
     gender: 'FEMALE',
     name: 'Bea Priestley',
-    points: 75
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
   },
   {
     id: 'trent-seven',
     name: 'Trent Seven',
+    points: POINTS.MID_MID, cost: COSTS.MID_MID,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/seven--4b2aa70d0986d55da81338322042390a.jpg'
   },
@@ -2059,18 +2115,21 @@ export default [
     id: 'dominik-mysterio',
     brandIds: ['raw'],
     name: 'Dominik Mysterio',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2020/09/PAY_08302020ca_09012--54316235a619d4726aae200125a5e10a.jpg'
   },
   {
     id: 'gran-metalik',
     name: 'Gran Metalik',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Gran_Metalik_Bio--3928f03ddef719128ab420aeaf169767.jpg'
   },
   {
     id: 'cedric-alexander',
     name: 'Cedric Alexander',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/04/Cedric_Alexander_bio--c1a7908563b1fc97db5210af4a1b774c.jpg'
   },
@@ -2078,7 +2137,7 @@ export default [
     id: 'maryse',
     name: 'Maryse',
     gender: 'FEMALE',
-    points: 40,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/2016/04/Maryse_bio--53d4b95fffae36897b53dee74fc93480.jpg'
   },
@@ -2086,7 +2145,7 @@ export default [
     id: 'dana-brooke',
     name: 'Dana Brooke',
     gender: 'FEMALE',
-    points: 40,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/2016/05/Dana_Brooke_bio--f5f84a5a733977677888d21313bfa1f2.jpg'
   },
@@ -2094,6 +2153,7 @@ export default [
     id: 'la-knight',
     brandIds: ['smackdown'],
     name: 'LA Knight',
+    points: POINTS.MAIN_BOTTOM, cost: COSTS.MAIN_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/maxdupri--60bd791efd1b08f12815380252f984cb.jpg'
   },
@@ -2102,20 +2162,21 @@ export default [
     brandIds: ['raw'],
     name: 'Dakota Kai',
     gender: 'FEMALE',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/12/Dakota_Kai_bio--5e6d364c3a19ebc1f9d1b1d63a319588.jpg'
   },
   {
     id: 'alex-reynolds',
     name: 'Alex Reynolds',
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/c/cd/ALEX_REYNOLDS_-_NYCWRESTLING8d47db.png/revision/latest?cb=20180517205925'
   },
   {
     id: 'brandon-cutler',
     name: 'Brandon Cutler',
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/7/72/Brandon_Cutler_-_ProfPic2020.png/revision/latest?cb=20200828191121'
   },
@@ -2123,14 +2184,14 @@ export default [
     id: 'john-silver',
     brandIds: ['aew'],
     name: 'John Silver',
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//vignette.wikia.nocookie.net/prowrestling/images/4/40/John_Silver_-_8d474600d3.png/revision/latest?cb=20170701213727'
   },
   {
     id: 'peter-avalon',
     name: 'Peter Avalon',
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecf396fe-0ac8-46ce-a309-a3f5445e7da5/ddjywav-73aa0ff5-ae70-40e3-a9c6-081210e70345.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWNmMzk2ZmUtMGFjOC00NmNlLWEzMDktYTNmNTQ0NWU3ZGE1XC9kZGp5d2F2LTczYWEwZmY1LWFlNzAtNDBlMy1hOWM2LTA4MTIxMGU3MDM0NS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.DbNd_QbvW3pAiIK5IGNx_ProzI7MI1M1cKSkQq0bV_0'
   },
@@ -2138,14 +2199,14 @@ export default [
     id: 'brandi-rhodes',
     gender: 'FEMALE',
     name: 'Brandi Rhodes',
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image: '//d2isjg8ovcm7q0.cloudfront.net/sites/default/files/brandi-bio.png'
   },
   {
     id: 'shane-mcmahon',
     name: 'Shane McMahon',
     brandIds: ['smackdown', 'raw'],
-    points: 70,
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/04/Shane_McMahon_bio--dd98519dd13d1576c9aba0faa2fb7d5a.jpg'
   },
@@ -2153,7 +2214,7 @@ export default [
     id: 'tony-khan',
     brandIds: ['aew'],
     name: 'Tony Khan',
-    points: 70,
+    points: POINTS.NO_COMBAT, cost: COSTS.NO_COMBAT,
     image:
       '//static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/jaguars/jt26ywmaiham3uxem0ij'
   },
@@ -2161,7 +2222,7 @@ export default [
     id: 'eric-bischoff',
     brandIds: ['wcw'],
     name: 'Eric Bischoff',
-    points: 40,
+    points: POINTS.NO_COMBAT, cost: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/all/2021/03/sBISCH_00001997_0001_Profile--54526b070e6c973cd60e77e5627615f2.png'
   },
@@ -2169,6 +2230,7 @@ export default [
     id: 'pat-mcafee',
     brandIds: [],
     name: 'Pat McAfee',
+    points: POINTS.NO_COMBAT, cost: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/07/Pat_McAfee_bio--1f9a51b1dedfe6960816ba1fe80d918a.jpg'
   },
@@ -2176,6 +2238,7 @@ export default [
     id: 'veer',
     name: 'Veer',
     brandIds: ['nxt'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/09/RAW_08162021JG_29617--48bb2fdd755f11002b1078eb88981440.jpg'
   },
@@ -2183,6 +2246,7 @@ export default [
     id: 'r-truth',
     brandIds: ['raw'],
     name: 'R-Truth',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2017/10/RAW_08142017mm_1072--1934b5031bdf402c3b0599e405ab55ce.jpg'
   },
@@ -2191,6 +2255,7 @@ export default [
     brandIds: ['smackdown'],
     name: 'Aliyah',
     gender: 'FEMALE',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/02/Aliyah_bio--ca6c1918d192562b153aee66dc6179c4.jpg'
   },
@@ -2198,6 +2263,7 @@ export default [
     id: 'jinder-mahal',
     brandIds: ['smackdown'],
     name: 'Jinder Mahal',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Jinder_Mahal_Bio--b18c5da31c5ed821345d62542b50e20f.jpg'
   },
@@ -2205,17 +2271,16 @@ export default [
     id: 'william-regal',
     brandIds: ['aew'],
     name: 'William Regal',
-    points: POINTS.ANNOUNCER,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/William_Regal_bio.png'
   },
   {
     id: 'vickie-guerrero',
-    wwe: true,
     brandIds: ['aew'],
     name: 'Vickie Guerrero',
     gender: 'FEMALE',
-    points: POINTS.ANNOUNCER,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/2016/03/Vickie_Guerrero_bio--0a44827a757ab9c396a3840685ae44dd.jpg'
   },
@@ -2223,6 +2288,7 @@ export default [
     id: 'nikki-bella',
     name: 'Nikki Bella',
     gender: 'FEMALE',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2016/10/Nikki_Bella_bio--28403f1b0d0708650c4238453589a2c5.jpg'
   },
@@ -2230,22 +2296,23 @@ export default [
     id: 'brie-bella',
     name: 'Brie Bella',
     gender: 'FEMALE',
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Brie_Bella_bio.png'
   },
   {
     id: 'vince-mcmahon',
-    wwe: true,
     name: 'Vince McMahon',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     brandIds: ['hall-of-fame'],
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
     image:
       '//www.wwe.com/f/styles/wwe_16_9_s/public/all/2022/04/283_WM38_04032022RF_18218--fbd3fe75b2d22971d2eb069f27a09c00.jpg'
   },
   {
     id: 'reggie',
     name: 'Reggie',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2022/07/reggie2--233fb356b111311004fa537d1de792d6.jpg'
   },
@@ -2253,6 +2320,7 @@ export default [
     id: 'adam-pearce',
     brandIds: ['smackdown', 'raw'],
     name: 'Adam Pearce',
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/04/069_SD_01152021JG_28036--ce110f4a904916474a8417a765711ea1--54dd59c656af9c3b1deac51f1c781d53.jpg'
   },
@@ -2262,12 +2330,13 @@ export default [
     name: 'MA.ÇÉ',
     image:
       '//www.wwe.com/f/styles/talent_champion_lg/public/all/2021/09/MACE_TBAR_04262021ej_00044_Mace_Profile--aee511a9e8afbcc0c06959914e3125c7.png',
-    points: 25
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'booker-t',
     name: 'Booker T',
     brandIds: ['nxt'],
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Booker_T_bio.png'
   },
@@ -2275,6 +2344,7 @@ export default [
     id: 'mike-rome',
     name: 'Mike Rome',
     brandIds: ['smackdown', 'raw'],
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2016/09/Mike_Rome_bio--abd47b6d9382a5dec2d6b5dbd3b48182.jpg'
   },
@@ -2282,7 +2352,7 @@ export default [
     id: 'jerry-lawler',
     brandIds: ['smackdown', 'raw'],
     name: 'Jerry Lawler',
-    points: POINTS.ANNOUNCER,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2018/02/Jerry_Lawler_bio--31bcec10ae4fa3b12d4b478ecb5e7832.jpg'
   },
@@ -2290,7 +2360,7 @@ export default [
     id: 'paul-heyman',
     brandIds: ['smackdown', 'raw'],
     name: 'Paul Heyman',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Paul_Heyman_bio.png'
   },
@@ -2299,7 +2369,7 @@ export default [
     brandIds: ['smackdown', 'raw'],
     name: 'Kayla Braxton',
     gender: 'FEMALE',
-    points: POINTS.ANNOUNCER,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/08/205_06042019hm_0742--b4a01bd5a66372566be888fb29e9350d.jpg'
   },
@@ -2307,7 +2377,7 @@ export default [
     id: 'corey-graves',
     brandIds: ['raw'],
     name: 'Corey Graves',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2019/01/Corey_Graves_Bio--d1ed81cf137a4ab4071b6998d203b985.jpg'
@@ -2316,7 +2386,7 @@ export default [
     id: 'michael-cole',
     brandIds: ['smackdown'],
     name: 'Michael Cole',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Michael_Cole_bio.png'
   },
@@ -2324,7 +2394,7 @@ export default [
     id: 'byron-saxton',
     brandIds: ['raw'],
     name: 'Byron Saxton',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.ANNOUNCER, cost: COSTS.ANNOUNCER,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Byron_Saxton_bio.png'
   },
@@ -2333,7 +2403,7 @@ export default [
     name: 'Stephanie McMahon',
     brandIds: ['smackdown', 'raw'],
     gender: 'FEMALE',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     alignment: ALIGNMENTS.BAD,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Stephanie_McMahon_bio.png'
@@ -2341,7 +2411,7 @@ export default [
   {
     id: 'robert-stone',
     name: 'Mr. Stone',
-    points: POINTS.NO_COMBAT,
+    points: POINTS.NO_COMBAT, points: COSTS.NO_COMBAT,
     image:
       '//www.wwe.com/f/styles/wwe_large/public/all/2021/04/Robert_Stone_bio--5c82f620350b06c66566e65f19361dfb.jpg'
   },
@@ -2349,17 +2419,15 @@ export default [
     id: 'karl-anderson',
     name: 'Karl Anderson',
     image:
-    '//www.njpw1972.com/wp-content/uploads/2017/03/KarlAnderson_20220518_@AEW_1-2.jpg',
+      '//www.njpw1972.com/wp-content/uploads/2017/03/KarlAnderson_20220518_@AEW_1-2.jpg',
     brandIds: ['raw'],
-    wwe: true,
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'luke-gallows',
     name: 'Luke Gallows',
     brandIds: ['raw'],
-    wwe: true,
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'aaron-henare',
@@ -2367,7 +2435,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/henare_20210404_3.jpg',
     brandIds: ['njpw'],
     name: 'Aaron Henare',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'alex-coughlin',
@@ -2375,7 +2443,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2018/10/AlexCoughlin_20220518_1.png',
     brandIds: ['njpw'],
     name: 'Alex Coughlin',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'alex-zayne',
@@ -2383,7 +2451,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/11/AlexZayne_20220524_6-1.jpg',
     brandIds: ['njpw'],
     name: 'Alex Zayne',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'bad-dude-tito',
@@ -2391,7 +2459,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/11/BadDudeTito_220514_@AEW_2-2.jpg',
     brandIds: ['njpw'],
     name: 'Bad Dude Tito',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'bad-luck-fale',
@@ -2399,7 +2467,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/fale_20210107_3-1.jpg',
     brandIds: ['njpw'],
     name: 'Bad Luck Fale',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'barrett-brown',
@@ -2407,7 +2475,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/11/20191114_BarretBrown@free_1.jpg',
     brandIds: ['njpw'],
     name: 'Barrett Brown',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'bateman',
@@ -2415,7 +2483,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/01/TylerBateman_20201113_02.jpg',
     brandIds: ['njpw'],
     name: 'BATEMAN',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'blake-christian',
@@ -2423,7 +2491,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/08/BlakeChristian_20201113_01.jpg',
     brandIds: ['njpw'],
     name: 'Blake Christian',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'brody-king',
@@ -2431,7 +2499,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/01/BrodyKing_20190522_1.png',
     brandIds: ['njpw'],
     name: 'Brody King',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'bushi',
@@ -2439,14 +2507,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/BUSHI_20220513_1-1.jpg',
     brandIds: ['njpw'],
     name: 'BUSHI',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'chase-owens',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/Chase_20210730_2.png',
     brandIds: ['njpw'],
     name: 'Chase Owens',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'chris-bey',
@@ -2454,14 +2522,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/11/ChrisBey_20210831@IMPACT.jpg',
     brandIds: ['njpw'],
     name: 'Chris Bey',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'chris-dickinson',
     image: '//www.njpw1972.com/wp-content/uploads/2021/01/chrisdickinson2.png',
     brandIds: ['njpw'],
     name: 'Chris Dickinson',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'clark-connors',
@@ -2469,15 +2537,15 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2018/10/ClarkConnors_20220524_3-1.jpg',
     brandIds: ['njpw'],
     name: 'Clark Connors',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'daniel-garcia',
     image:
       '//www.njpw1972.com/wp-content/uploads/2021/08/DanielGarcia_20210520_02.jpg',
-    brandIds: ['njpw'],
+    brandIds: ['aew'],
     name: 'Daniel Garcia',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'danny-limelight',
@@ -2485,7 +2553,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/07/DannyLimelight_20210511_02-1.jpg',
     brandIds: ['njpw'],
     name: 'Danny Limelight',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'david-finlay',
@@ -2493,7 +2561,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/Finlay_20220514_@AEW_1.png',
     brandIds: ['njpw'],
     name: 'David Finlay',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'dick-togo',
@@ -2501,21 +2569,21 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/03/DickTogo_20200720_4-1.jpg',
     brandIds: ['njpw'],
     name: 'Dick Togo',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'douki',
     image: '//www.njpw1972.com/wp-content/uploads/2019/05/DOUKI_20210107_3.jpg',
     brandIds: ['njpw'],
     name: 'DOUKI',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'el-desperado',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/Despe_20210311_2.png',
     brandIds: ['njpw'],
     name: 'El Desperado',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'el-phantasmo',
@@ -2523,14 +2591,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/04/ElPhantasmo20210107_5.png',
     brandIds: ['njpw'],
     name: 'El Phantasmo',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'evil',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/EVIL_20211515_1.png',
     brandIds: ['njpw'],
     name: 'EVIL',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'francesco-akira',
@@ -2538,14 +2606,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2022/05/FrancescoAkira_20220524_4.png',
     brandIds: ['njpw'],
     name: 'Francesco Akira',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'fred-rosser',
     image: '//www.njpw1972.com/wp-content/uploads/2020/09/fred.png',
     brandIds: ['njpw'],
     name: 'Fred Rosser',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'gabriel-kidd',
@@ -2553,21 +2621,21 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/01/GabrielKidd_20210413_2.png',
     brandIds: ['njpw'],
     name: 'Gabriel Kidd',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'gedo',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/gedo_20190718_3.png',
     brandIds: ['njpw'],
     name: 'Gedo',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'great-o-khan',
     image: '//www.njpw1972.com/wp-content/uploads/2019/01/Okhan_20201016_3.png',
     brandIds: ['njpw'],
     name: 'Great-O-Khan',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'hikuleo',
@@ -2575,7 +2643,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/09/HIKULEO_20190308_3.png',
     brandIds: ['njpw'],
     name: 'Hikuleo',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'hiromu-takahashi',
@@ -2583,14 +2651,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/hiromu_20220301_3.png',
     brandIds: ['njpw'],
     name: 'Hiromu Takahashi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'hirooki-goto',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/goto_1.png',
     brandIds: ['njpw'],
     name: 'Hirooki Goto',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'hiroshi-tanahashi',
@@ -2598,7 +2666,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/tanahashi_20220121_2.jpg',
     brandIds: ['njpw'],
     name: 'Hiroshi Tanahashi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'hiroyoshi-tenzan',
@@ -2606,14 +2674,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/tenzan_20190617_4-1.png',
     brandIds: ['njpw'],
     name: 'Hiroyoshi Tenzan',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jado',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/jado_20220705_2.jpg',
     brandIds: ['njpw'],
     name: 'Jado',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jay-white',
@@ -2621,7 +2689,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/JayWhite_20220211@AEW_3.jpg',
     brandIds: ['njpw'],
     name: 'Jay White',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jon-moxley',
@@ -2629,7 +2697,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/05/JonMoxley_20190605_2.png',
     brandIds: ['njpw'],
     name: 'Jon Moxley',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jonah',
@@ -2637,7 +2705,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/11/JONAH_20220514_@AEW_1.png',
     brandIds: ['njpw'],
     name: 'JONAH',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jonathan-gresham',
@@ -2645,7 +2713,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/01/JonathanGresham_20190222_4.png',
     brandIds: ['njpw'],
     name: 'Jonathan Gresham',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jorel-nelson',
@@ -2653,7 +2721,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/05/Jorel_20210315_01.gif',
     brandIds: ['njpw'],
     name: 'Jorel Nelson',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'jr-kratos',
@@ -2661,14 +2729,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/11/JR-Kratos_20210601_1.png',
     brandIds: ['njpw'],
     name: 'JR Kratos',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'juice-robinson',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/Juice_20220501_1.png',
     brandIds: ['njpw'],
     name: 'Juice Robinson',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'karl-fredericks',
@@ -2676,14 +2744,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2018/10/KarlFredericks_20210930_4.png',
     brandIds: ['njpw'],
     name: 'Karl Fredericks',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'katsuyori-shibata',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/shibata_01_01-1.png',
     brandIds: ['njpw'],
     name: 'Katsuyori Shibata',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kazuchika-okada',
@@ -2691,14 +2759,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/okada_20220131_11.png',
     brandIds: ['njpw'],
     name: 'Kazuchika Okada',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kenta',
     image: '//www.njpw1972.com/wp-content/uploads/2017/04/KENTA_20220705_1.jpg',
     brandIds: ['njpw'],
     name: 'KENTA',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kevin-knight',
@@ -2706,7 +2774,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/12/KevinKnight_20201113_01.png',
     brandIds: ['njpw'],
     name: 'Kevin Knight',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kosei-fujita',
@@ -2714,7 +2782,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/08/FujitaKosei_20211223_1.png',
     brandIds: ['njpw'],
     name: 'Kosei Fujita',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kota-ibushi',
@@ -2722,7 +2790,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/03/ibushi_20200907_4-copy.png',
     brandIds: ['njpw'],
     name: 'Kota Ibushi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'kyle-fletcher',
@@ -2730,14 +2798,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/08/KyleFletcherAussie-Open_20190821@ROH.png',
     brandIds: ['njpw'],
     name: 'Kyle Fletcher',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'lio-rush',
     image: '//www.njpw1972.com/wp-content/uploads/2020/11/Lio600x400.png',
     brandIds: ['njpw'],
     name: 'Lio Rush',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'mark-davis',
@@ -2745,7 +2813,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/08/MarkDavisAussie-Open_20190821@ROH.png',
     brandIds: ['njpw'],
     name: 'Mark Davis',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'mascara-dorada',
@@ -2753,14 +2821,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/03/MascaraDorada_20220217_1.png',
     brandIds: ['njpw'],
     name: 'Mascara Dorada',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'master-wato',
     image: '//www.njpw1972.com/wp-content/uploads/2020/07/wato_20210901_3.jpg',
     brandIds: ['njpw'],
     name: 'Master Wato',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'mikey-nicholls',
@@ -2768,7 +2836,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/02/MikeyNicholls_20190308_5-1.png',
     brandIds: ['njpw'],
     name: 'Mikey Nicholls',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'minoru-suzuki',
@@ -2776,7 +2844,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/suzuki_20200907_2.jpg',
     brandIds: ['njpw'],
     name: 'Minoru Suzuki',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'misterioso',
@@ -2784,7 +2852,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/11/20191114_Misterioso@free_1.png',
     brandIds: ['njpw'],
     name: 'Misterioso',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'ren-narita',
@@ -2792,7 +2860,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/Narita_20210930_1.png',
     brandIds: ['njpw'],
     name: 'Ren Narita',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'robbie-eagles',
@@ -2800,14 +2868,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2018/10/RobbieEagles_20201120_3.png',
     brandIds: ['njpw'],
     name: 'Robbie Eagles',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'rocky-romero',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/rocky_20210830_4.png',
     brandIds: ['njpw'],
     name: 'Rocky Romero',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'royce-isaacs',
@@ -2815,7 +2883,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/05/RoyceIsaacs_20220514_@AEW_1.png',
     brandIds: ['njpw'],
     name: 'Royce Isaacs',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'ryohei-oiwa',
@@ -2823,7 +2891,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/08/OiwaRyohei_20211223_4.png',
     brandIds: ['njpw'],
     name: 'Ryohei Oiwa',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'ryu-lee',
@@ -2831,7 +2899,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2019/12/DragonLee_2018122_1.png',
     brandIds: ['njpw'],
     name: 'Ryu Lee',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'ryusuke-taguchi',
@@ -2839,7 +2907,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/taguchi_20210901_3.jpg',
     brandIds: ['njpw'],
     name: 'Ryusuke Taguchi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'sanada',
@@ -2847,7 +2915,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/sanada_20220120_6.jpg',
     brandIds: ['njpw'],
     name: 'SANADA',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'satoshi-kojima',
@@ -2855,7 +2923,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/kojima_20210303_1.png',
     brandIds: ['njpw'],
     name: 'Satoshi Kojima',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'shane-haste',
@@ -2863,7 +2931,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2022/03/ShaneHaste_20220217_3.png',
     brandIds: ['njpw'],
     name: 'Shane Haste',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'shingo-takagi',
@@ -2871,14 +2939,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2018/10/takagi_20220318_3.png',
     brandIds: ['njpw'],
     name: 'Shingo Takagi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'sho',
     image: '//www.njpw1972.com/wp-content/uploads/2017/09/sho_20210921_05.png',
     brandIds: ['njpw'],
     name: 'SHO',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 'shota-umino',
@@ -2886,14 +2954,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/03/umino_20190811_5-2.png',
     brandIds: ['njpw'],
     name: 'Shota Umino',
-    points: POINTS.MID_MID
+    points: POINTS.MID_MID, cost: COSTS.MID_MID
   },
   {
     id: 's-w-3-rve',
     image: '//www.njpw1972.com/wp-content/uploads/2022/02/Sw3rve_202201_1.png',
     brandIds: ['njpw'],
     name: 'SW3RVE',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'taichi',
@@ -2901,7 +2969,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/taichi_20210730_2.png',
     brandIds: ['njpw'],
     name: 'Taichi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'taiji-ishimori',
@@ -2909,28 +2977,28 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/04/ishimori_20220121_5.png',
     brandIds: ['njpw'],
     name: 'Taiji Ishimori',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'taka-michinoku',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/TAKA_20211130_4.png',
     brandIds: ['njpw'],
     name: 'TAKA Michinoku',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tama-tonga',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/tama_20220404_1.png',
     brandIds: ['njpw'],
     name: 'Tama Tonga',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tanga-loa',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/loa_20220409_2.png',
     brandIds: ['njpw'],
     name: 'Tanga Loa',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tetsuya-naito',
@@ -2938,14 +3006,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/naito_20220121_suit_5.jpg',
     brandIds: ['njpw'],
     name: 'Tetsuya Naito',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'the-dkc',
     image: '//www.njpw1972.com/wp-content/uploads/2020/07/DKC_20210520_01.png',
     brandIds: ['njpw'],
     name: 'The DKC',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tiger-mask',
@@ -2953,7 +3021,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/tigermask_20211130_2.png',
     brandIds: ['njpw'],
     name: 'Tiger Mask',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tit-n',
@@ -2961,14 +3029,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/06/Titan_20220421_4※©CMLL表記必要.png',
     brandIds: ['njpw'],
     name: 'Titán',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tjp',
     image: '//www.njpw1972.com/wp-content/uploads/2019/07/TJP_20220524_5.png',
     brandIds: ['njpw'],
     name: 'TJP',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'togi-makabe',
@@ -2976,7 +3044,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/makabe_20211130_5.png',
     brandIds: ['njpw'],
     name: 'Togi Makabe',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tom-lawlor',
@@ -2984,14 +3052,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2020/07/TomLawlor_20220514_@AEW_1.png',
     brandIds: ['njpw'],
     name: 'Tom Lawlor',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tomoaki-honma',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/honma_20220318_4.png',
     brandIds: ['njpw'],
     name: 'Tomoaki Honma',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'tomohiro-ishii',
@@ -2999,7 +3067,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/ishii_20170616_02-1.png',
     brandIds: ['njpw'],
     name: 'Tomohiro Ishii',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'toru-yano',
@@ -3007,7 +3075,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/yano_20190616_2-1.png',
     brandIds: ['njpw'],
     name: 'Toru Yano',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'volador-jr',
@@ -3015,7 +3083,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/03/VoladorJr_20191016_3-1.png',
     brandIds: ['njpw'],
     name: 'Volador Jr.',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'wheeler-yuta',
@@ -3023,7 +3091,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/04/WheelerYuta_20210625@AEW_2.png',
     brandIds: ['njpw'],
     name: 'Wheeler Yuta',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'will-ospreay',
@@ -3031,14 +3099,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/ospreay_20220309_3.png',
     brandIds: ['njpw'],
     name: 'Will Ospreay',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yoh',
     image: '//www.njpw1972.com/wp-content/uploads/2017/09/YOH_20211129_3.png',
     brandIds: ['njpw'],
     name: 'YOH',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yoshi-hashi',
@@ -3046,7 +3114,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/YoshiHashi_20211026_2.png',
     brandIds: ['njpw'],
     name: 'YOSHI-HASHI',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yoshinobu-kanemaru',
@@ -3054,14 +3122,14 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/kanemaru_20190423_3-1.png',
     brandIds: ['njpw'],
     name: 'Yoshinobu Kanemaru',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yota-tsuji',
     image: '//www.njpw1972.com/wp-content/uploads/2018/03/tsuji_20200803_4.png',
     brandIds: ['njpw'],
     name: 'Yota Tsuji',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yuji-nagata',
@@ -3069,7 +3137,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/nagata_20220526_3.png',
     brandIds: ['njpw'],
     name: 'Yuji Nagata',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yujiro-takahashi',
@@ -3077,7 +3145,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/yujiro_20210329_4-1.png',
     brandIds: ['njpw'],
     name: 'Yujiro Takahashi',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yuto-nakashima',
@@ -3085,7 +3153,7 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2021/02/NakashimaYuto_20211222_2.png',
     brandIds: ['njpw'],
     name: 'Yuto Nakashima',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'yuya-uemura',
@@ -3093,13 +3161,13 @@ export default [
       '//www.njpw1972.com/wp-content/uploads/2017/02/Uemura_20210930_2.png',
     brandIds: ['njpw'],
     name: 'Yuya Uemura',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   },
   {
     id: 'zack-sabre-jr',
     image: '//www.njpw1972.com/wp-content/uploads/2017/02/zack_20211026_1.png',
     brandIds: ['njpw'],
     name: 'Zack Sabre Jr.',
-    points: POINTS.MID_MID
+    points: POINTS.MID_BOTTOM, cost: COSTS.MID_BOTTOM,
   }
 ]
