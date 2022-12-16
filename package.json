@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/imports.esm.js",
+  "module": "dist/fsx-imports.esm.js",
   "description": "wrestling, brands, shows and championships via contribution",
   "engines": {
     "node": ">=14.2"
